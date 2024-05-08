@@ -1,18 +1,12 @@
 import streamlit as st
-from utils import st_def
+from utils import st_def, doc
 
-st.set_page_config(page_title='👋 AI',  page_icon="🚀",)
-st.title('🔍 AI')
+st.set_page_config(page_title='👋 RESTful',  page_icon="🚀",)
+st.title('🔍 RESTful')
 st_def.st_logo()
 
-st.markdown("🚀) 🍨📄Rule Extraction📚: Python Libraries  Approaches📰🍨 ")
+doc.rest()
+
+
 st.image("./images/zhang.gif")
 
-pdf1 = st.file_uploader('Upload your PDF Document', type='pdf')
-#-----------------------------------------------
-if pdf1:
-    pdfReader = PyPDF2.PdfReader(pdf1)
-    st.session_state['pdfreader'] = pdfReader
-    st.success(" has loaded.")
-else:
-    st.info("waiting for loading ...")
