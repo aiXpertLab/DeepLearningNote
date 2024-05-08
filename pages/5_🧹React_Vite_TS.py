@@ -9,20 +9,17 @@ tab1, tab2 = st.tabs(["Start", "Structure"])
 with tab1:
     st.markdown('''
     
-    ### 一、创建项目
-    1. 初始化命令
-        `npm init vite`
+    1. 初始化命令        `npm init vite`
 
     2. 项目名称
-    3. 选择框架
-    4. 选择语言
-    5. 安装依赖
-        `cd react-vite-project
-        npm install`
-    5.1 为项目添加路由组件依赖
+    3. 选择框架选择语言
+    4. 安装依赖`npm install`
     
-        npm i react-router-dom -S
-        npm i @types/react-router-dom -S
+    5. 为项目添加路由组件依赖
+    
+        `npm i react-router-dom -S`
+        
+        `npm i @types/react-router-dom -S`
         
     6. 增加antd UI
         `npm i antd --save`
@@ -31,8 +28,11 @@ with tab1:
     8. 支持scss
         `npm i sass -D`
     9. 创建assets/styles/index.scss文件
-        $red:red;
+        `$red:red;`
+        
     10.引入index.scss文件
+    ''')
+    st.code("""
         //打开vite.config.ts,添加scss的预编译选项
         export default defineConfig({
           ...
@@ -43,7 +43,9 @@ with tab1:
               },
             }
           }
-        })
+        })""")
+        
+    st.code('''
     11.调用
         //1、修改App.css > App.scss
         //2、添加scs语法设置字体颜色
@@ -55,13 +57,11 @@ with tab1:
         修改为：
         import './App.scss'
 
-
-    
     ''')
   
 
 with tab2:
-    st.markdown('''
+    st.text('''
     
     项目目录：
 ├─node_modules		//第三方依赖
